@@ -3,11 +3,16 @@
 {% block title %}Thanks For RSVPing To {{ event.title }}{% endblock %}
 
 {% block content %}
-    <h1>Thanks For RSVPing To {{ event.title }}</h1>
+    <h1>Thanks For RSVPing To {{ event.title }}.</h1>
     
     <p>
         You've been placed on the 
-        <a href="{% url rsvp_event_view event.slug %}">"{{ guest.get_attending_status_display }}" 
-        list</a>.
+        "{{ guest.get_attending_status_display }}" 
+        list.
+    </p>
+
+    <p>
+      &larr;
+      <a href="{% url rsvp_event_view event.slug %}">Return to the event.</a>
     </p>
 {% endblock %}

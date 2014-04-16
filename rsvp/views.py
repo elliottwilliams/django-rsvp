@@ -11,7 +11,7 @@ def event_view(request, slug, model_class=Event, form_class=RSVPForm, template_n
     event = get_object_or_404(model_class, slug=slug)
     
     if request.POST:
-        form = form_class(request.POST)
+        form = form_class(request.POST, event=event)
         
         if form.is_valid():
             guest = form.save()

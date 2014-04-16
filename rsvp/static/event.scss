@@ -1,0 +1,27 @@
+@import "variables";
+
+.response {
+  // @include span-columns(6);
+
+  label { display: block }
+
+  ul { padding-left: 0.5em }
+  li {
+    margin-left: 0.5em;
+    list-style: none;
+    display: inline;
+    label { display: inline }
+  }
+}
+
+.details {
+  @include media($big) {
+    @include span-columns(3);
+  }
+
+  iframe {
+    @include media($big) {
+      max-width: 90%;
+    }
+  }
+}

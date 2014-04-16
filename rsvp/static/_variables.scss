@@ -1,0 +1,7 @@
+@import "bourbon/bourbon";
+@import "neat/neat";
+
+$dim: rgba(255,255,255,0.7);
+$background: #3f6075;
+$mobile: new-breakpoint(max-width 48em);
+$big:    new-breakpoint(min-width 48em);

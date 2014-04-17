@@ -4,14 +4,26 @@
   // @include span-columns(6);
 
   label { display: block }
+  p:first-of-type label { display: none }
 
-  ul { padding-left: 0.5em }
+  ul { padding: 0 0.5em }
   li {
     margin-left: 0.5em;
     list-style: none;
     display: inline;
     label { display: inline }
   }
+
+  .errorlist {
+    border: 1px solid #fff;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+    display: inline-block;
+    margin-bottom: 0;
+
+    li { margin-right: 0.5em }
+  }
+
 }
 
 .details {

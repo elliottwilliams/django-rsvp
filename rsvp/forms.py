@@ -7,9 +7,9 @@ VISIBLE_ATTENDING_CHOICES = [choice for choice in ATTENDING_CHOICES if choice[0]
 
 
 class RSVPForm(forms.Form):
-    email = forms.EmailField()
-    name = forms.CharField(max_length=128)
     attending = forms.ChoiceField(choices=VISIBLE_ATTENDING_CHOICES, initial='yes', widget=forms.RadioSelect)
+    name = forms.CharField(max_length=128)
+    email = forms.EmailField()
     number_of_guests = forms.IntegerField(initial=0)
     comment = forms.CharField(max_length=255, required=False, widget=forms.Textarea)
     

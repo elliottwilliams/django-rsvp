@@ -47,13 +47,24 @@
         <p>This event has already happened.</p>
         
         {% else %}
+
+        {% if preexisting %}
+        <p><span class="mark">
+            We've already received your response. You can
+            use the form below to update your RSVP.
+        </span></p>
+        {% endif %}
         <form method="post" action=".">
             <table>
                 {{ form.as_p }}
                 <tr>
                     <td>&nbsp;</td>
                     <td>
+                        {% if preexisting %}
+                        <input type="submit" value="&#10003;  Update your RSVP">
+                        {% else %}
                         <input type="submit" value="&#10003;  Send your RSVP">
+                        {% endif %}
                     </td>
                 </tr>
             </table>

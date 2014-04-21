@@ -92,8 +92,8 @@ class Event(models.Model):
 
 class Guest(models.Model):
     event = models.ForeignKey(Event, related_name='guests')
-    email = models.EmailField()
-    name = models.CharField(max_length=128, blank=True, default='')
+    email = models.EmailField(max_length=255, blank=True, default='')
+    name = models.CharField(max_length=128, default='')
     attending_status = models.CharField(max_length=32, choices=ATTENDING_CHOICES, default='no_rsvp')
     number_of_guests = models.SmallIntegerField(default=0)
     comment = models.CharField(max_length=255, blank=True, default='')
